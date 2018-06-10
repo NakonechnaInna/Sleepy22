@@ -18,6 +18,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.example.inna.sleepy2.AudioProcessServices.AudioProccessModule;
+
 import jp.wasabeef.blurry.Blurry;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView bgStars;
     private ImageView bgOreol;
     private Chronometer timer;
-
+    private AudioProccessModule audioProccessModule;
 
     private NoiseDetector mNoiseDetectorThread;
 
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         bgOreol = findViewById(R.id.bgoreol);
         startButton = findViewById(R.id.startbutton);
         timer = findViewById(R.id.timer);
+        audioProccessModule = new AudioProccessModule();
 
 
         //TODO firebase
@@ -137,7 +140,8 @@ public class MainActivity extends AppCompatActivity {
             timer.setBase(SystemClock.elapsedRealtime());
             timer.start();
             timer.setVisibility(View.VISIBLE);
-            mNoiseDetectorThread = new NoiseDetector(this);
+            audioProccessModule.startRecording();
+//            mNoiseDetectorThread = new NoiseDetector(this);
             return;
         }
         if (isOnSleep) {
@@ -145,8 +149,9 @@ public class MainActivity extends AppCompatActivity {
             bgOreol.setImageResource(R.drawable.oreol);
             startButton.setBackgroundResource(R.drawable.moon);
             try {
-                mNoiseDetectorThread.IsNoiseDetectorEnabled = false;
-                mNoiseDetectorThread = null;
+                audioProccessModule.startRecording();
+//                mNoiseDetectorThread.IsNoiseDetectorEnabled = false;
+//                mNoiseDetectorThread = null;
             } catch (Exception e) {
                 System.out.println("Blow Value=" + e.getMessage());
             }
