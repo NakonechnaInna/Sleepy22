@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#64ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:theme="@style/nightTheme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Реєстрація"
+            android:textColor="#4c2775"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/regLogin"
+                style="@style/Registration"
+                android:drawableLeft="@drawable/helloman"
+                android:hint="Логін" />
+
+            <EditText
+                android:id="@+id/regEmail"
+                style="@style/Registration"
+                android:hint="Email"
+                android:drawableLeft="@drawable/email"/>
+
+            <EditText
+                android:id="@+id/regPass"
+                style="@style/Registration"
+                android:hint="Пароль"
+                android:drawableLeft="@drawable/unlock"
+                android:inputType="textPassword"/>
+
+            <EditText
+                android:id="@+id/regPassPlus"
+                style="@style/Registration"
+                android:hint="Підтвердження пароля"
+                android:drawableLeft="@drawable/lock"
+                android:inputType="textPassword"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/reg_arrows"
+            android:onClick="finishRegistry" />
+
+
+    </LinearLayout>
+</LinearLayout>

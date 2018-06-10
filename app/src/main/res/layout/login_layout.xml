@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:fitsSystemWindows="true"
+    android:gravity="center|bottom"
+    android:theme="@style/nightTheme">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/sleepyLogo"
+            android:layout_width="200dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/sleepy" />
+
+        <EditText
+            android:id="@+id/login"
+            style="@style/loginStyle"
+            android:layout_marginTop="18dp"
+            android:hint="логін або e-mail"
+            android:singleLine="true"
+            android:textColorHint="#64ffffff"
+            android:inputType="textEmailAddress"
+            />
+
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/loginStyle"
+            android:hint="пароль"
+            android:inputType="textPassword"
+            android:textColorHint="#64ffffff" />
+
+        <TextView
+            android:id="@+id/toRegistration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="5dp"
+            android:text="Реєстрація"
+            android:textColor="#ffffff"
+            android:textIsSelectable="false"
+            android:onClick="toRegistration"/>
+
+        <ImageButton
+            android:onClick="toSleepy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/arrows" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

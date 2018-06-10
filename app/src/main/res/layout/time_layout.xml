@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.inna.sleepy2.MainActivity">
+
+    <include layout="@layout/menu" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tbg"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/stars"/>
+
+    <ImageButton
+        android:id="@+id/sun"
+        android:layout_width="257dp"
+        android:layout_height="257dp"
+        android:background="@drawable/sun"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/plusFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_size="normal"
+        android:src="@drawable/plus"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/colorAccent"
+        />
+
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:context="com.example.inna.sleepy2.MainActivity">
+
+
+    <Button
+        style="@style/ButtonMenu"
+        android:drawableLeft="@drawable/alarm"
+        android:onClick="toAlarm"
+        android:text="Будильник" />
+
+    <Button
+        android:id="@+id/timelineButton"
+        style="@style/ButtonMenu"
+        android:drawableLeft="@drawable/timeline"
+        android:text="Timeline" />
+
+    <Button
+        android:id="@+id/modeButton"
+        style="@style/ButtonMenu"
+        android:drawableLeft="@drawable/mode"
+        android:text="Mode" />
+
+    <Button
+        android:id="@+id/settingsButton"
+        style="@style/ButtonMenu"
+        android:drawableLeft="@drawable/settings"
+        android:text="Settings" />
+
+    <Button
+        android:onClick="toHelp"
+        style="@style/ButtonMenu"
+        android:drawableLeft="@drawable/help"
+        android:text="Допомога" />
+
+    <Button
+        android:id="@+id/rateButton"
+        style="@style/ButtonMenu"
+        android:drawableLeft="@drawable/rate"
+        android:text="Rate" />
+
+
+</LinearLayout>
