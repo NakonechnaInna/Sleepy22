@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
     private Chronometer timer;
     private AudioProccessModule audioProccessModule;
 
-    private NoiseDetector mNoiseDetectorThread;
 
 
     @Override
@@ -140,8 +139,7 @@ public class MainActivity extends AppCompatActivity {
             timer.setBase(SystemClock.elapsedRealtime());
             timer.start();
             timer.setVisibility(View.VISIBLE);
-            audioProccessModule.startRecording();
-//            mNoiseDetectorThread = new NoiseDetector(this);
+            audioProccessModule.stopRecording();
             return;
         }
         if (isOnSleep) {
@@ -150,8 +148,6 @@ public class MainActivity extends AppCompatActivity {
             startButton.setBackgroundResource(R.drawable.moon);
             try {
                 audioProccessModule.startRecording();
-//                mNoiseDetectorThread.IsNoiseDetectorEnabled = false;
-//                mNoiseDetectorThread = null;
             } catch (Exception e) {
                 System.out.println("Blow Value=" + e.getMessage());
             }
