@@ -45,8 +45,10 @@ public class LoginActivity extends AppCompatActivity {
     //TODO смена view день/ночь
 
     public void toRegistration(View view) {
-        Intent myIntent = new Intent(LoginActivity.this, RegistryActivity.class);
+        Intent myIntent = new Intent(LoginActivity.this, TimelineActivity.class);
         LoginActivity.this.startActivity(myIntent);
+//        Intent myIntent = new Intent(LoginActivity.this, RegistryActivity.class);
+//        LoginActivity.this.startActivity(myIntent);
     }
 
     public void toSleepy(View view) {
